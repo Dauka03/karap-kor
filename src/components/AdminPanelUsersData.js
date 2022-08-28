@@ -39,10 +39,14 @@ function AdminPanelUsersData(props){
             if(item._id===key){
             companyData.map((itemCom)=>{
                 if(item.company_name===itemCom.company_name){
-                    if(itemCom.users_data.verified===true){
+                    console.log(itemCom.users_data.verified);
+                    // if(itemCom.users_data.verified===false){
                     itemCom.users_data.push(item)
-                    }
+                    // console.log("AAA");
                     updateCompany(itemCom)
+                    // }
+                    
+                    
                 }
             })
             }
@@ -80,7 +84,8 @@ function AdminPanelUsersData(props){
                         <th>id</th>
                         <th>age</th>
                         <th>salary</th>
-                        <th>job title</th>
+                        <th>level name</th>
+                        <th>tag</th>
                         <th>company name</th>
                         <th>stack technology</th>
                         <th>creatted date</th>
@@ -94,7 +99,8 @@ function AdminPanelUsersData(props){
                         <td>{person._id}</td>
                         <td>{person.age}</td>
                         <td>{person.salary}</td>
-                        <td>{person.job_title}</td>
+                        <td>{person.level_name}</td>
+                        <td>{person.tag}</td>
                         <td>{person.company_name}</td>
                         <td>{person.stack_technology}</td>
                         <td>{person.creatted_date}</td>

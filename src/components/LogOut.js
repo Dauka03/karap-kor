@@ -1,11 +1,10 @@
 
 function LogOut(props){
     const {isAuth, setAuth} = props;
-    console.log(isAuth);
 
     const onLogOut = () => {
             setAuth(false)
-            console.log(isAuth);
+            
     }
     return(
         <>
