@@ -14,16 +14,18 @@ function SignIn(props){
                 password
              })
         .then((response) => {
-          if(!isAuth){
+          if(response.data){
             setAuth(true);
             alert(username+" Welcome")
+            console.log(isAuth);
+            
           }
           else{
             alert(username+ " You are already autorized" )
           }
           
           console.log(isAuth);
-          console.log(response.data);
+          console.log(response);
         });
         } catch (e) {
             console.log("User is not autorized");

@@ -1,3 +1,9 @@
 .person_verified{
     background-color: lightgreen;
 }
+@media (max-width:600px) {
+    .company{
+        display: none;
+    }
+    
+}

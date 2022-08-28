@@ -1,4 +1,19 @@
 .App {
   text-align: center;
+  margin: 0 10vw;
 }
-
+.App-header{
+  height: 60px;
+  padding:0 10vw;
+  margin-bottom: 20px;
+  background-color: #5D707A;
+  display: flex;
+  justify-content: space-between;
+}
+body{
+}
+@media (max-width:600px) {
+  .admin{
+      display: none;
+  }
+}
