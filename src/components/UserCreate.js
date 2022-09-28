@@ -35,7 +35,7 @@ function UserCreate(props){
   const handleClose = () => setOpen(false);
   const onCreateClick = () => {
         axios
-          .post("http://localhost:5000/api/usersdata", {
+          .post("https://secure-temple-40348.herokuapp.com/api/usersdata", {
             age,
             salary,
             level_name,
@@ -70,7 +70,7 @@ function UserCreate(props){
         }
       } 
       const createCompany = (company_name)=>{
-        const apiUrl = "http://localhost:5000/api/company";
+        const apiUrl = "https://secure-temple-40348.herokuapp.com/api/company";
         axios
         .post(apiUrl, { company_name, users_data })
         .then((response) => {});

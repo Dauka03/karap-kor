@@ -22,7 +22,7 @@ function App() {
   const [companyData, setCompanyData] = useState([]);
 
   const getUsers = () => {
-    const apiUrl = 'http://localhost:5000/api/usersdata'
+    const apiUrl = 'https://secure-temple-40348.herokuapp.com/api/usersdata'
     axios.get(apiUrl).then((response)=>{
       setUsersData(response.data)
     })
@@ -33,7 +33,7 @@ function App() {
   const usersSorted = verifiedUsers.sort((data)=>Math.floor((now-new Date(data.creatted_date))/1000/60))
 
   const getCompany = () => {
-    const apiUrl = 'http://localhost:5000/api/company'
+    const apiUrl = 'https://secure-temple-40348.herokuapp.com/api/company'
     axios.get(apiUrl).then((response)=>{
       setCompanyData(response.data)
     })

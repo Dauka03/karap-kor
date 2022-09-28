@@ -24,7 +24,7 @@ function AdminPanelUsersData(props){
                 else if(item.verified===false){
                     item.verified=true;
                 }
-                axios.put(`http://localhost:5000/api/usersdata`,item).then((response)=>{
+                axios.put(`https://secure-temple-40348.herokuapp.com/api/usersdata`,item).then((response)=>{
                     console.log(response.data);
                     setUsers([...users, response.data])
                 })
@@ -53,7 +53,7 @@ function AdminPanelUsersData(props){
           })
       }
       const updateCompany = (item) => {
-        const apiUrl = 'http://localhost:5000/api/company'
+        const apiUrl = 'https://secure-temple-40348.herokuapp.com/api/company'
         axios.put(apiUrl, item).then((response)=>{
             setCompanyData(companyData.map((company) => {
                 if(company._id === response.data._id) return response.data;
@@ -65,7 +65,7 @@ function AdminPanelUsersData(props){
     function userDelete(key){
         usersData.map((item)=>{
             if(item._id === key){
-                axios.delete(`http://localhost:5000/api/usersdata/${item._id}`).then((response)=>{
+                axios.delete(`https://secure-temple-40348.herokuapp.com/api/usersdata/${item._id}`).then((response)=>{
                     console.log(response.data);
                     setUsers([...users, response.data])
                     return {...users}

@@ -9,7 +9,7 @@ function SignUp(){
   
   const onCreateUser = () => {
     axios
-      .post("http://localhost:5000/auth/registration", {
+      .post("https://secure-temple-40348.herokuapp.com/auth/registration", {
         username,
         password,
       })

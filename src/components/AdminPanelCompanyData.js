@@ -19,7 +19,7 @@ function AdminPanelCompanyData(props){
     const companyDelete=(key)=>{
         companyData.map((item)=>{
             if(item._id === key){
-                axios.delete(`http://localhost:5000/api/company/${item._id}`).then((response)=>{
+                axios.delete(`https://secure-temple-40348.herokuapp.com/api/company/${item._id}`).then((response)=>{
                     console.log(response.data);
                     setUsers([...users, response.data])
                     return {...users}
