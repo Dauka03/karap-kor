@@ -61,7 +61,7 @@ function AdminPanelUsersData(props){
             }))
         })
       } 
-      
+    
     function userDelete(key){
         usersData.map((item)=>{
             if(item._id === key){
